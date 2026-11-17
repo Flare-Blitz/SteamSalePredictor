@@ -9,3 +9,5 @@ __pycache__/
 
 # Local copy of the large external dataset and its generated metadata.
 /GameListDataset/
+
+CompileDataset/FetchSaleHistory/sale_history.json
