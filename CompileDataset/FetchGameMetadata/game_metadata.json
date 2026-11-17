@@ -4107,10 +4107,10 @@
     "name": "VOIDRAVE",
     "app_id": 4840190,
     "release_date": "2026-07-13",
-    "release_date_text": "13 Jul, 2026",
+    "release_date_text": "Jul 13, 2026",
     "coming_soon": false,
-    "price": 5.19,
-    "currency": "EUR",
+    "price": 4.99,
+    "currency": "USD",
     "content_descriptors": [],
     "categories": [
       {
@@ -7018,10 +7018,10 @@
     "name": "Two Point Campus",
     "app_id": 1649080,
     "release_date": "2022-08-09",
-    "release_date_text": "9 Aug, 2022",
+    "release_date_text": "Aug 9, 2022",
     "coming_soon": false,
-    "price": 3888.0,
-    "currency": "JPY",
+    "price": 29.99,
+    "currency": "USD",
     "content_descriptors": [],
     "categories": [
       {
@@ -14536,66 +14536,66 @@
   {
     "name": "Far Cry® 5",
     "app_id": 552520,
-    "release_date": null,
-    "release_date_text": "26 marca 2018",
+    "release_date": "2018-03-26",
+    "release_date_text": "Mar 26, 2018",
     "coming_soon": false,
-    "price": 249.9,
-    "currency": "PLN",
+    "price": 59.99,
+    "currency": "USD",
     "content_descriptors": [],
     "categories": [
       {
         "id": 2,
-        "description": "Jednoosobowa"
+        "description": "Single-player"
       },
       {
         "id": 1,
-        "description": "Wieloosobowa"
+        "description": "Multi-player"
       },
       {
         "id": 9,
-        "description": "Kooperacja"
+        "description": "Co-op"
       },
       {
         "id": 38,
-        "description": "Kooperacja przez internet"
+        "description": "Online Co-op"
       },
       {
         "id": 22,
-        "description": "Osiągnięcia Steam"
+        "description": "Steam Achievements"
       },
       {
         "id": 29,
-        "description": "Karty kolekcjonerskie Steam"
+        "description": "Steam Trading Cards"
       },
       {
         "id": 13,
-        "description": "Dostępne napisy"
+        "description": "Captions available"
       },
       {
         "id": 35,
-        "description": "Zakupy w aplikacji"
+        "description": "In-App Purchases"
       },
       {
         "id": 18,
-        "description": "Częściowa obsługa kontrolerów"
+        "description": "Partial Controller Support"
       },
       {
         "id": 17,
-        "description": "Zawiera edytor poziomów"
+        "description": "Includes level editor"
       },
       {
         "id": 61,
-        "description": "Włączone HDR"
+        "description": "HDR available"
       }
     ],
     "genres": [
       {
         "id": "1",
-        "description": "Akcja"
+        "description": "Action"
       },
       {
         "id": "25",
-        "description": "Przygodowe"
+        "description": "Adventure"
       }
     ],
     "publisher_game_count": 135
@@ -17058,82 +17058,82 @@
   {
     "name": "DARK SOULS™ III",
     "app_id": 374320,
-    "release_date": null,
-    "release_date_text": "11/abr./2016",
+    "release_date": "2016-04-11",
+    "release_date_text": "Apr 11, 2016",
     "coming_soon": false,
-    "price": 229.9,
-    "currency": "BRL",
+    "price": 59.99,
+    "currency": "USD",
     "content_descriptors": [],
     "categories": [
       {
         "id": 2,
-        "description": "Um jogador"
+        "description": "Single-player"
       },
       {
         "id": 1,
-        "description": "Multijogador"
+        "description": "Multi-player"
       },
       {
         "id": 9,
-        "description": "Cooperativo"
+        "description": "Co-op"
       },
       {
         "id": 22,
-        "description": "Conquistas Steam"
+        "description": "Steam Achievements"
       },
       {
         "id": 28,
-        "description": "Compat. total com controle"
+        "description": "Full controller support"
       },
       {
         "id": 29,
-        "description": "Cartas Colecionáveis Steam"
+        "description": "Steam Trading Cards"
       },
       {
         "id": 67,
-        "description": "Conforto de câmera"
+        "description": "Camera Comfort"
       },
       {
         "id": 68,
-        "description": "Controles de volume independentes"
+        "description": "Custom Volume Controls"
       },
       {
         "id": 74,
-        "description": "Jogável sem precisar de reação rápida"
+        "description": "Playable without Timed Input"
       },
       {
         "id": 79,
-        "description": "Salvamento a qualquer momento"
+        "description": "Save Anytime"
       },
       {
         "id": 69,
-        "description": "Som estéreo"
+        "description": "Stereo Sound"
       },
       {
         "id": 70,
-        "description": "Som surround"
+        "description": "Surround Sound"
       },
       {
         "id": 41,
-        "description": "Remote Play no celular"
+        "description": "Remote Play on Phone"
       },
       {
         "id": 42,
-        "description": "Remote Play no tablet"
+        "description": "Remote Play on Tablet"
       },
       {
         "id": 43,
-        "description": "Remote Play na TV"
+        "description": "Remote Play on TV"
       },
       {
         "id": 62,
-        "description": "Compartilhamento em família"
+        "description": "Family Sharing"
       }
     ],
     "genres": [
       {
         "id": "1",
-        "description": "Ação"
+        "description": "Action"
       }
     ],
     "publisher_game_count": 33
@@ -21017,10 +21017,10 @@
     "name": "The Witness",
     "app_id": 210970,
     "release_date": "2016-01-26",
-    "release_date_text": "26 Jan, 2016",
+    "release_date_text": "Jan 26, 2016",
     "coming_soon": false,
-    "price": 29.99,
-    "currency": "GBP",
+    "price": 39.99,
+    "currency": "USD",
     "content_descriptors": [],
     "categories": [
       {
@@ -22857,84 +22857,84 @@
     "publisher_game_count": 1
   },
   {
-    "name": "异形工厂（Shapez）",
+    "name": "shapez",
     "app_id": 1318690,
-    "release_date": null,
-    "release_date_text": "2020 年 6 月 7 日",
+    "release_date": "2020-06-07",
+    "release_date_text": "Jun 7, 2020",
     "coming_soon": false,
-    "price": 35.0,
-    "currency": "CNY",
+    "price": 9.99,
+    "currency": "USD",
     "content_descriptors": [],
     "categories": [
       {
         "id": 2,
-        "description": "单人"
+        "description": "Single-player"
       },
       {
         "id": 22,
-        "description": "Steam 成就"
+        "description": "Steam Achievements"
       },
       {
         "id": 64,
-        "description": "可调整文字大小"
+        "description": "Adjustable Text Size"
       },
       {
         "id": 67,
-        "description": "视角舒适度"
+        "description": "Camera Comfort"
       },
       {
         "id": 66,
-        "description": "可选颜色"
+        "description": "Color Alternatives"
       },
       {
         "id": 68,
-        "description": "自定义音量控制"
+        "description": "Custom Volume Controls"
       },
       {
         "id": 75,
-        "description": "可以仅用键盘"
+        "description": "Keyboard Only Option"
       },
       {
         "id": 76,
-        "description": "可以仅用鼠标"
+        "description": "Mouse Only Option"
       },
       {
         "id": 74,
-        "description": "无需应对快速反应事件"
+        "description": "Playable without Timed Input"
       },
       {
         "id": 79,
-        "description": "随时保存"
+        "description": "Save Anytime"
       },
       {
         "id": 65,
-        "description": "字幕选项"
+        "description": "Subtitle Options"
       },
       {
         "id": 23,
-        "description": "Steam 云"
+        "description": "Steam Cloud"
       },
       {
         "id": 62,
-        "description": "家庭共享"
+        "description": "Family Sharing"
       }
     ],
     "genres": [
       {
         "id": "4",
-        "description": "休闲"
+        "description": "Casual"
       },
       {
         "id": "23",
-        "description": "独立"
+        "description": "Indie"
       },
       {
         "id": "28",
-        "description": "模拟"
+        "description": "Simulation"
       },
       {
         "id": "2",
-        "description": "策略"
+        "description": "Strategy"
       }
     ],
     "publisher_game_count": 16
@@ -24726,10 +24726,10 @@
     "name": "Hakimi Blaster - Hakimi Survivors",
     "app_id": 4060660,
     "release_date": "2026-07-14",
-    "release_date_text": "14 Jul, 2026",
+    "release_date_text": "Jul 14, 2026",
     "coming_soon": false,
     "price": 1.0,
-    "currency": "EUR",
+    "currency": "USD",
     "content_descriptors": [],
     "categories": [
       {
@@ -31352,10 +31352,10 @@
     "name": "Dream Corps",
     "app_id": 4197920,
     "release_date": "2026-07-10",
-    "release_date_text": "10 Jul, 2026",
+    "release_date_text": "Jul 10, 2026",
     "coming_soon": false,
-    "price": 10.25,
-    "currency": "EUR",
+    "price": 9.99,
+    "currency": "USD",
     "content_descriptors": [],
     "categories": [
       {
@@ -34314,52 +34314,52 @@
   {
     "name": "Stardew Valley",
     "app_id": 413150,
-    "release_date": null,
-    "release_date_text": "26 lutego 2016",
+    "release_date": "2016-02-26",
+    "release_date_text": "Feb 26, 2016",
     "coming_soon": false,
-    "price": 53.99,
-    "currency": "PLN",
+    "price": 14.99,
+    "currency": "USD",
     "content_descriptors": [],
     "categories": [
       {
         "id": 2,
-        "description": "Jednoosobowa"
+        "description": "Single-player"
       },
       {
         "id": 1,
-        "description": "Wieloosobowa"
+        "description": "Multi-player"
       },
       {
         "id": 9,
-        "description": "Kooperacja"
+        "description": "Co-op"
       },
       {
         "id": 38,
-        "description": "Kooperacja przez internet"
+        "description": "Online Co-op"
       },
       {
         "id": 48,
-        "description": "Kooperacja przez sieć lokalną"
+        "description": "LAN Co-op"
       },
       {
         "id": 39,
-        "description": "Kooperacja na wspólnym/dzielonym ekranie"
+        "description": "Shared/Split Screen Co-op"
       },
       {
         "id": 24,
-        "description": "Wspólny/dzielony ekran"
+        "description": "Shared/Split Screen"
       },
       {
         "id": 22,
-        "description": "Osiągnięcia Steam"
+        "description": "Steam Achievements"
       },
       {
         "id": 28,
-        "description": "Pełna obsługa kontrolerów"
+        "description": "Full controller support"
       },
       {
         "id": 29,
-        "description": "Karty kolekcjonerskie Steam"
+        "description": "Steam Trading Cards"
       },
       {
         "id": 23,
@@ -34367,11 +34367,11 @@
       },
       {
         "id": 41,
-        "description": "Remote Play na telefonie"
+        "description": "Remote Play on Phone"
       },
       {
         "id": 42,
-        "description": "Remote Play na tablecie"
+        "description": "Remote Play on Tablet"
       },
       {
         "id": 44,
@@ -34379,13 +34379,13 @@
       },
       {
         "id": 62,
-        "description": "Udostępnianie gier"
+        "description": "Family Sharing"
       }
     ],
     "genres": [
       {
         "id": "23",
-        "description": "Niezależne"
+        "description": "Indie"
       },
       {
         "id": "3",
@@ -34393,7 +34393,7 @@
       },
       {
         "id": "28",
-        "description": "Symulacje"
+        "description": "Simulation"
       }
     ],
     "publisher_game_count": 1
