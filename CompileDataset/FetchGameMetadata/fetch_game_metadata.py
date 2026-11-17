@@ -82,14 +82,14 @@ def _record_list(value: object) -> list[dict[str, Any]]:
     ]
 
 
-def _content_descriptors(data: dict[str, Any]) -> list[str]:
+def _content_descriptors(data: dict[str, Any]) -> list[int]:
     descriptors = data.get("content_descriptors")
     if not isinstance(descriptors, dict):
         return []
-    notes = descriptors.get("notes")
-    if not isinstance(notes, list):
+    ids = descriptors.get("ids")
+    if not isinstance(ids, list):
         return []
-    return [note for note in notes if isinstance(note, str)]
+    return [id for id in ids if isinstance(id, int)]
 
 
 def _price_fields(data: dict[str, Any]) -> tuple[float | None, str | None]:
