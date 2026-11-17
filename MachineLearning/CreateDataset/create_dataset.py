@@ -11,6 +11,15 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 METADATA_PATH = PROJECT_ROOT / "CompileDataset/FetchGameMetadata/game_metadata.json"
 SALE_HISTORY_PATH = PROJECT_ROOT / "CompileDataset/FetchSaleHistory/sale_history.json"
 
+# List was obtained from https://fredericksen.substack.com/p/steam-video-game-ratings-and-mature
+CONTENT_DESCRIPTORS = {
+    1: "some_nudity",
+    2: "frequent_violence",
+    3: "adult_only",
+    4: "frequent_nudity",
+    5: "general_mature"
+}
+
 def extract_metadata(row: pd.Series) -> dict:
     """Extract the relevant metadata fields from a row of the merged dataset."""
     release_date = row.get("release_date")
@@ -66,21 +75,15 @@ def extract_metadata(row: pd.Series) -> dict:
     content_descriptors = row.get("content_descriptors")
     if isinstance(content_descriptors, list):
         for descriptor in content_descriptors:
-            if not isinstance(descriptor, str) or not descriptor.strip():
+            if not isinstance(descriptor, int):
                 continue
-            column_name = re.sub(
-                r"[^a-z0-9]+",
-                "_",
-                descriptor.strip().lower(),
-            ).strip("_")
-            if column_name:
-                metadata[f"content_descriptor_{column_name}"] = 1
+            metadata[f"content_descriptor_{CONTENT_DESCRIPTORS[descriptor]}"] = 1
 
     return metadata
 
 def extract_sale_history(
     history: list[dict],
-    index: int,
+    index: int
 ) -> dict:
     """Extract summary features and the target for one sale-history entry."""
     if not 0 <= index < len(history):
@@ -103,6 +106,10 @@ def extract_sale_history(
         if isinstance(discount, bool) or not isinstance(discount, (int, float)):
             return None
         return float(discount)
+
+    # If there are no previous sales, use the release date as the starting
+    # point for calculating the time between sales.
+    release_date = timestamp_for(-1)
 
     previous_sales = [
         previous_index
@@ -156,9 +163,21 @@ def extract_sale_history(
             target_days = (
                 current_sale_start - previous_sale_end
             ).total_seconds() / 86400
+    else:
+        current_sale_start = timestamp_for(index)
+        if release_date is not None and current_sale_start is not None:
+            target_days = (
+                current_sale_start - release_date
+            ).total_seconds() / 86400
 
     return {
         "sales_since_cutoff": len(previous_sales),
+        "last_sale_year": previous_timestamps[0].year
+            if previous_timestamps else release_date.year if release_date else None,
+        "last_sale_month": previous_timestamps[0].month
+            if previous_timestamps else release_date.month if release_date else None,
+        "last_sale_day": previous_timestamps[0].day
+            if previous_timestamps else release_date.day if release_date else None,
         "average_time_between_sales": (
             sum(intervals) / len(intervals) if intervals else None
         ),
@@ -201,7 +220,7 @@ def calculate_game_data(row: pd.Series) -> list[dict]:
                 metadata
                 | extract_sale_history(
                     history,
-                    i,
+                    i
                 )
             )
 
