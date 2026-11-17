@@ -91,8 +91,12 @@ def create_grouped_sample(
     remaining = sample_size
     sizes = group_sizes.to_numpy()
 
+    # Iteratively allocate the minimum to undersized groups
+    # until all allocations meet it.
     while active_groups:
+        # Total games assigned to all groups
         active_size = sum(sizes[index] for index in active_groups)
+
         ideal_counts = {
             index: remaining * sizes[index] / active_size
             for index in active_groups
