@@ -14,7 +14,7 @@ from urllib.request import Request, urlopen
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 INPUT_PATH = PROJECT_ROOT / "CompileDataset" / "CreateGameList" / "grouped_sample.csv"
 OUTPUT_PATH = Path(__file__).resolve().parent / "game_metadata.json"
-APPDETAILS_URL = "https://store.steampowered.com/api/appdetails/"
+APPDETAILS_URL = "https://store.steampowered.com/api/appdetails?l=english&cc=us&"
 REQUEST_TIMEOUT_SECONDS = 15
 REQUEST_INTERVAL_SECONDS = 2.0
 MAX_ATTEMPTS = 3
@@ -22,7 +22,7 @@ USER_AGENT = "SteamSalePredictor/1.0"
 
 def fetch_appdetails_payload(app_id: int) -> object:
     """Request and decode one Steam appdetails response."""
-    url = f"{APPDETAILS_URL}?{urlencode({'appids': app_id})}"
+    url = f"{APPDETAILS_URL}{urlencode({'appids': app_id})}"
     request = Request(url, headers={"User-Agent": USER_AGENT})
     with urlopen(request, timeout=REQUEST_TIMEOUT_SECONDS) as response:
         return json.loads(response.read().decode("utf-8"))
@@ -167,6 +167,7 @@ class SteamAppDetailsClient:
         self._last_request_started: float | None = None
 
     def _wait_for_request_slot(self) -> None:
+        """Sleep until at least request_interval seconds have passed since the last request."""
         now = self._monotonic()
         if self._last_request_started is not None:
             remaining = self._request_interval - (
