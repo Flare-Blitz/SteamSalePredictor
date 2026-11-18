@@ -1,6 +1,26 @@
 # SteamSalePredictor
 The objective of this project is to create a nn model that can accurately predict the number of days from the end of the last sale of a steam game until the next one.
 
+# File Architecture
+An outline of all folders, and the contained files
+- GameListDataset: This is where the Kaggle library steam_games.csv goes
+- CompileDataset: Directory for fetching the data from the external sources
+  - CreateGameList: Directory for querying the Kaggle dataset
+    - compile_game_list.py: queries steam_games.csv and outputs a list of 1000 games
+    - grouped_sample.csv: List of 1000 games
+  - Fetch Game Metadata: Directory for querying the Steam API
+    - fetch_game_metadata.py: Sends an API request to Steam to get metadata for each game in grouped_sample.csv
+    - game_metadata.json: Stores important Steam game metadata
+  - Fetch Sale History: directory for fetching steam game sales
+    - fetch_sale_data.py: Takes each steam game in game_metadata.json and fetches all sale data up to January 1st 2022. Generates sale_history.json
+    - sale_history_example.json: Example of the first 3 games for sale_history.json. Used due to sale_history.json's large file size
+- MachineLearning: Directory contains the machine learning code
+  - CreateDataset: Directory for assembling a completed dataset with some pre-processing
+    - create_dataset.py: Creates the dataset used to train the models. Saves dataset to sale_dataset.csv
+  - ModelRunning: Directory for running the model cleaning, analysis, and creation code
+    - data_cleaning.ipynb: Notebook used to perform data analysis, cleaning, model creation, and evaluation.
+
+
 # Data Collection
 
 The first step of this game is to collect the desired data for each game. 
